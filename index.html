@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makaton to English Translator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    body {
+        background-color: #f4f4f9;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #fff;
+        text-align: center;
+        width: 80%;
+        max-width: 960px;
+    }
+
+    video, canvas {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    #output {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #eef;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1.25rem;
+        color: #555;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Makaton to English Real-Time Translation</h1>
+        <video id="webcam" autoplay playsinline width="640" height="480"></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+        <div id="output">Translation appears here...</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
